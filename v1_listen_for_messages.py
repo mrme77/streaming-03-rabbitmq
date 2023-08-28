@@ -1,8 +1,7 @@
 """
 
-Always customize this docstring. 
-
-Add your name, date, and a description of the program.
+Author: Pasquale Salomone
+Date: August 28, 2023
 
 Listens for messages on the queue.
 This process runs continously. 
@@ -33,8 +32,19 @@ import pika, sys, os
 
 # define a main function to run the program
 def main():
-    # create a blocking connection to the RabbitMQ server
-    connection = pika.BlockingConnection(pika.ConnectionParameters(host='LocalHostt'))
+    """
+    Listens for and processes messages from a queue on the RabbitMQ server.
+
+    This function establishes a connection to a RabbitMQ server, creates a communication
+    channel, and consumes messages from a specific queue. It defines a callback function
+    to process received messages and starts consuming messages.
+
+    To exit the message consumption, press CTRL+C.
+
+    """
+
+     # create a blocking connection to the RabbitMQ server
+    connection = pika.BlockingConnection(pika.ConnectionParameters(host='LocalHost'))
     # use the connection to create a communication channel
     channel = connection.channel()
     # use the channel to declare a queue

@@ -1,25 +1,31 @@
 """
     This program sends a message to a queue on the RabbitMQ server.
 
-    Author: Denise Case
-    Date: January 14, 2023
+    Author: Pasquale Salomone
+    Date: August 28, 2023
 
 """
 
 # add imports at the beginning of the file
-import pika
-import sys
+import pika, sys
 
 def send_message(host: str, queue_name: str, message: str):
     """
-    Creates and sends a message to the queue each execution.
-    This process runs and finishes.
+    Sends a message to a queue on the RabbitMQ server.
+
+    Author: Pasquale Salomone
+    Date: August 28, 2023
 
     Parameters:
-        queue_name (str): the name of the queue
-        message (str): the message to be sent to the queue
+        host (str): The hostname or IP address of the RabbitMQ server.
+        queue_name (str): The name of the queue to which the message will be sent.
+        message (str): The message to be sent to the queue.
+
+    Raises:
+        AMQPConnectionError: If a connection to the RabbitMQ server cannot be established.
 
     """
+   
 
     try:
         # create a blocking connection to the RabbitMQ server
@@ -44,4 +50,4 @@ def send_message(host: str, queue_name: str, message: str):
 # without executing the code below.
 # If this is the program being run, then execute the code below
 if __name__ == "__main__":
-    send_message("llllocalhost","hello","Hello World!")
+    send_message("localhost","hello","Hello World!")
