@@ -1,91 +1,41 @@
 # Project Title: streaming-03-rabbitmq
+## Introduction
+This project demonstrates how to get started with RabbitMQ, a message broker, that enables multiple processes to communicate reliably through an intermediary
 
-Get started with RabbitMQ, a message broker, that enables multiple processes to communicate reliably through an intermediary
+#### Author: Pasquale Salomone, 28 August 2023
 
-## Before You Begin
 
-1. Fork this starter repo into your GitHub.
-1. Clone your repo down to your machine.
-1. In VS Code with Python extension, click on emit_message_v1.py to get VS Code in Python mode.
-1. View / Command Palette - then Python: Select Interpreter
-1. Select your conda environment. See the references below for more.
-1. Use the terminal to install pika into your active environment. 
+## Prerequisites
 
-`conda install -c conda-forge pika`
+1. Git
+1. Python 3.7+ (3.11+ preferred)
+1. VS Code Editor
+1. VS Code Extension: Python (by Microsoft)
 
-## Read
+The following modules are required: 
 
-1. Read the [RabbitMQ Tutorial - Hello, World!](https://www.rabbitmq.com/tutorials/tutorial-one-python.html)
-1. Read the code and comments in this repo.
 
-## Execute about,py
+| Module          | Version  |
+|-----------------|----------|
+| csv             | 1.0      |
+| random          | 3.11.4   |
+| sys             | 3.11.4   |
+| time            | 3.11.4   |
+| pika            | 1.3.2    |
 
-1. Run about.py.
-1. Read about.txt. 
-1. Verfiy you have exactly one active, one None env.
 
-## Version 1 - Execute the Producer/Sender
-
-1. Read v1_emit_message.py (and the tutorial)
-1. Run the file. 
-
-You'll need to fix an error in the program to get it to run.
-Once it runs and finishes, we can reuse the terminal.
-
-## Version 1 - Execute the Consumer/Listener
-
-1. Read v1_listen_for_messages.py (and the tutorial)
-1. Run the file.
-
-You'll need to fix an error in the program to get it to run.
-Once it runs successfully, will it terminate on its own? How do you know? 
-As long as the process is running, we cannot use this terminal for other commands. 
-
-## Version 1 - Open a New Terminal / Emit More Messages
-
-1. Open a new terminal window.
-1. Use this new window to emit more messages
-1. In v1_emit_message.py, modify the message. 
-1. Execute the script. 
-1. Watch what happens in the listening window.
-1. Do this several times to emit at least 3 different messages.
-
-## Version 1: Don't Repeat Yourself (DRY)
-
-1. Did you notice you had to change the message in two places?
-    1. You update the actual message sent. <i>Done</i>
-    1. You also update what is displayed to the user. <i>Done</i>
-1. Fix this by introducting a variable to hold the message. 
-    1. Use your variable when sending. <i>Done</i>
-    1. Use the variable again when displaying to the user. <i>Done</i>
-
-To send a new message, you'll only make one change.
+## Notes
+- Each of the files version  programs include an error (the locahost was spelled incorrectly) 
+- In the updated version, a variable `{message}` holds the message. 
+- To send a new message, you'll only make one change.
 Updating and improving code is called 'refactoring'. 
-Use your skills to keep coding enjoyable. 
-
-## Version 2
-
-Now look at the second version of each file.
-These include more graceful error handling,
-and a consistent, reusable approach to building code.
-
-Each of the version 2 programs include an error as well. 
-
-1. Find the error and fix it. <i> The error was in the way localhost was spelt.</i>
-1. Compare the structure of the version 2 files. 
-1. Modify the docstrings on all your files. <i>Done</i>
-1. Include your name and the date. <i>Done</i>
-1. Imports always go at the top, just after the file docstring.
-1. Imports should be one per line - why? <i> In my opinion, using separate lines is not necessarily better or worse than importing them on a single line; it's more a matter of coding style and readability.</i>
-1. Then, define your functions.
-1. Functions are reuable logic blocks.
-1. Everything the function needs comes in through the arguments.
-1. A function may - or may not - return a value. <i>True</i>
-1. When we open a connection, we should close the connection. <i>True</i>
-1. Which of the 4 files will always close() the connection?<i> The emit message files.</i>
-1. Search GitHub for if __name__ == "__main__":
-1. How many hits did you get? <i> About 528,000 results (0.48 seconds)</i>
-1. Learn and understand this common Python idiom.
+- Should Imports be one per line - why? <i> In my opinion, using separate lines is not necessarily better or worse than importing them on a single line; it's more a matter of coding style and readability.</i>
+- Functions are reuable logic blocks.
+- Everything the function needs comes in through the arguments; however, there are cases where functions might also rely on external factors such as global variables, environment variables, or other resources. These external factors are not strictly provided through function arguments, but they can still influence the behavior of the function.
+- A function may - or may not - return a value.
+- Friendly reminder, when we open a connection, we should close the connection. 
+- Of the 4 files, the emit message files will always have to close a connection.</i>
+- This python idiom `if __name__ == "__main__":` is very common; a google search returned about 528,000 results (0.48 seconds)</i>
 
 ## Reference
 
@@ -95,3 +45,12 @@ Each of the version 2 programs include an error as well.
 ## Multiple Terminals
 
 ![Mac Example](twoterminals.png)
+
+## Additional Resources
+
+1. For more information about Git in VS Code, see [Using Git source control in VS Code](https://code.visualstudio.com/docs/sourcecontrol/overview).
+1. For more information about editing Markdown in VS Code, see [Markdown and Visual Studio Code](https://code.visualstudio.com/docs/languages/markdown).
+
+## Acknowledgments
+
+I would like to acknoledge both Stackoverflow and ChatGPT as an instrumental aid in the development of this project.
