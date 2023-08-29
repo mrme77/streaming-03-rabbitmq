@@ -1,4 +1,4 @@
-# streaming-03-rabbitmq
+# Project Title: streaming-03-rabbitmq
 
 Get started with RabbitMQ, a message broker, that enables multiple processes to communicate reliably through an intermediary
 
@@ -53,11 +53,11 @@ As long as the process is running, we cannot use this terminal for other command
 ## Version 1: Don't Repeat Yourself (DRY)
 
 1. Did you notice you had to change the message in two places?
-    1. You update the actual message sent. 
-    1. You also update what is displayed to the user. 
+    1. You update the actual message sent. <i>Done</i>
+    1. You also update what is displayed to the user. <i>Done</i>
 1. Fix this by introducting a variable to hold the message. 
-    1. Use your variable when sending. 
-    1. Use the variable again when displaying to the user. 
+    1. Use your variable when sending. <i>Done</i>
+    1. Use the variable again when displaying to the user. <i>Done</i>
 
 To send a new message, you'll only make one change.
 Updating and improving code is called 'refactoring'. 
@@ -71,20 +71,20 @@ and a consistent, reusable approach to building code.
 
 Each of the version 2 programs include an error as well. 
 
-1. Find the error and fix it. 
+1. Find the error and fix it. <i> The error was in the way localhost was spelt.</i>
 1. Compare the structure of the version 2 files. 
-1. Modify the docstrings on all your files.
-1. Include your name and the date.
+1. Modify the docstrings on all your files. <i>Done</i>
+1. Include your name and the date. <i>Done</i>
 1. Imports always go at the top, just after the file docstring.
-1. Imports should be one per line - why?
+1. Imports should be one per line - why? <i> In my opinion, using separate lines is not necessarily better or worse than importing them on a single line; it's more a matter of coding style and readability.</i>
 1. Then, define your functions.
 1. Functions are reuable logic blocks.
 1. Everything the function needs comes in through the arguments.
-1. A function may - or may not - return a value. 
-1. When we open a connection, we should close the connection. 
-1. Which of the 4 files will always close() the connection?
+1. A function may - or may not - return a value. <i>True</i>
+1. When we open a connection, we should close the connection. <i>True</i>
+1. Which of the 4 files will always close() the connection?<i> The emit message files.</i>
 1. Search GitHub for if __name__ == "__main__":
-1. How many hits did you get? 
+1. How many hits did you get? <i> About 528,000 results (0.48 seconds)</i>
 1. Learn and understand this common Python idiom.
 
 ## Reference
@@ -94,4 +94,4 @@ Each of the version 2 programs include an error as well.
 
 ## Multiple Terminals
 
-![Mac Example](screenshot.png)
+![Mac Example](twoterminals.png)
